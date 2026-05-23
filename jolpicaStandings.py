@@ -58,4 +58,4 @@ for season in target_seasons:
             time.sleep(1.0)
             
 
-print("\nIngestion process completed successfully.")
+print("\n process completed.")
