@@ -1,0 +1,25 @@
+#Resources#
+https://docs.redpanda.com/current/get-started/quick-start/
+https://www.redpanda.com/blog/python-redpanda-kafka-api-tutorial
+
+#Commands to install and try out RedPanda local#
+mkdir redpanda
+cd redpanda
+curl -sSL https://docs.redpanda.com/redpanda-quickstart.tar.gz | tar xzf -
+cd docker-compose
+docker compose up -d
+
+Make sure docker-desktop is installed in Windows and is running while executing "docker compose up -d"
+If the above command executes successfully, Red Panda console should be visible in http://localhost:8080
+Initially login with username - superuser and password - secretpassword
+Change it after logging in
+
+
+Change the docker-compose.yml according to your cluster requirements and start container again
+docker-compose up -d 
+
+#Create topic#
+docker exec redpanda-local rpk topic create f1_live_telemetry
+
+#Sending telemetry from python#
+pip install kafka-python
