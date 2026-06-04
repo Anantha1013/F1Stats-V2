@@ -3,4 +3,4 @@ venv/
 ENV/
 __pycache__/
 *.pyc
-.en
+.env
